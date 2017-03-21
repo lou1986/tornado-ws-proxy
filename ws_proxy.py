@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
 import tornado
 import tornado.websocket
 import tornado.iostream
@@ -31,7 +34,6 @@ class TCPClient(object):
 	def on_close(self):
 		if self.client:
 			self.client.close()
-		print 'closed'
 
 	def write(self, msg):
 		self.stream.write(msg)
